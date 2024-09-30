@@ -1,0 +1,172 @@
+@font-face {
+    font-family: 'ddag';
+    src: url('fonts/ddag.otf') format('truetype');
+}
+@font-face {
+    font-family: 'hak_l';
+    src: url('fonts/hak_l.otf') format('truetype');
+}
+@font-face {
+    font-family: 'hak_b';
+    src: url('fonts/hak_b.otf') format('truetype');
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+    background-image: url('Media/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+#logo {
+    margin-left: 30px;
+    color: rgb(20, 20, 20);
+    font-family: 'ddag';
+    text-decoration-line: none;
+    font-size: 0.7cm;
+}
+#logo:hover {
+    color: rgb(71, 71, 71);
+    font-family: 'ddag';
+}
+
+header hr {
+    width: 180px;
+}
+
+.version {
+    margin-left: 10px;
+    border: solid 1px #bcbcbc;
+    border-radius: 0.5rem;
+    padding: 2px 5px 2px 5px;
+    background-color: #e7e7e7;
+    font-size: 8px;
+}
+
+
+.box{
+    margin: auto;
+    margin-top: 10%;
+    border: solid 1px black;
+    border-radius: 7px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0px 0px 70px rgba(29, 22, 17, 0.534);
+}
+
+.box-on {
+    height: 20px;
+    border-radius: 6px 6px 0 0;
+    border-bottom: solid 1px black;
+    background-color: black;
+}
+
+.box-on span {
+    position: absolute;
+    margin-left: -50px;
+    margin-top: 3px;
+    color: rgba(255, 255, 255, 0.417);
+    font-size: 9px;
+    font-family: 'hak_l';
+}
+
+.text-box {
+    margin-top: -30px;
+    font-size: 1.3em;
+}
+
+.text-box hr {
+    margin: auto;
+    margin-top: -10px;
+    width: 244px;
+    margin-bottom: 40px;
+}
+
+
+.text-box p {
+    font-family: 'hak_b';
+}
+
+.text-box button {
+    font-family: 'hak_b';
+    padding: 4px 40px;
+    background-color: #ebebeb;
+    border: solid 1.5px black;
+    border-radius: 0.3rem;
+    box-shadow: rgba(255, 255, 255, 0.311) 0px 0px 20px;
+    font-size: 0.7em;
+}
+
+
+.text-box button:hover {
+    background-color: #c9c9c9;
+    border: solid 1.5px gray;
+    border-radius: 0.3rem;
+    box-shadow: rgba(255, 255, 255, 0.311) 0px 0px 20px;
+}
+
+#on-btn-1 {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 6px;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 101, 101);
+}
+
+#on-btn-2 {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 23px;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 224, 113);
+}
+
+#on-btn-3 {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 41px;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(165, 255, 113);
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: gainsboro;
+    border: solid rgba(0, 0, 0, 0.073) 1px;
+}
+
+.copy {
+    padding-top: 10px;
+    font-size: 9px;
+}
+
+.copy a {
+    color: black;
+}
+
+form legend {
+    font-family: 'hak_b';
+}
+
+#go-btn {
+    color: rgb(206, 206, 206);
+    background-color: rgb(80, 80, 80);
+}
+
+#go-btn:hover {
+    color: rgb(206, 206, 206);
+    background-color: rgb(0, 0, 0);
+}
