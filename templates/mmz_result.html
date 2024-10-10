@@ -22,11 +22,14 @@
                 <div class="text-box">
                     <p>이런 메뉴는 어떤가요?</p>
                     <div>
-                        <p>{{ menu_1 }}</p>
-                        <p>{{ menu_2 }}</p>
-                        <p>{{ menu_3 }}</p>
-                        <p>{{ menu_4 }}</p>
-                        <p>{{ menu_5 }}</p>
+                        <p>{{ menu_rec }}</p>
+                    </div>
+                    <div id="items">
+                        <span>{{ menu_1 }}</span>
+                        <span>{{ menu_2 }}</span>
+                        <span>{{ menu_3 }}</span>
+                        <span>{{ menu_4 }}</span>
+                        <span>{{ menu_5 }}</span>
                     </div>
                     <button onclick = "location.href = '{% url 'mmz_home' %}'">다시하기</button>
                     <button onclick = "location.href = '#'">공유하기</button>

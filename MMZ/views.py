@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from MMZ.MMZ_AI import *
 from django.http import JsonResponse
 import logging
+import random
 
 def home(request):
     return render(request, 'mmz_home.html')
@@ -98,11 +99,14 @@ def mmz_ai(request):
     # 메뉴 리스트 생성
     menu_list = send_data(make_senddata(how, who, price, mood, kind, country, spicy, condition, weather, etc))
 
+    menu_rec = menu_list[random.randint(0, 4)]
+
     # 메뉴 리스트가 문자열인 경우 따옴표 제거 및 리스트로 변환
     if isinstance(menu_list, str):
         menu_list = menu_list.replace("'", "").replace('"', '').split(' ')
 
     # 리스트에 메뉴가 5개 미만일 경우를 대비해 기본값을 설정
+
     menu_1 = menu_list[0] if len(menu_list) > 0 else '오류'
     if menu_1.find("'"):
         menu_1 = menu_1.replace("'", "")
@@ -114,6 +118,7 @@ def mmz_ai(request):
         menu_5 = menu_5.replace("'", "")
 
     # 각 메뉴를 세션에 저장
+    request.session['menu_rec'] = menu_rec
     request.session['menu_1'] = menu_1
     request.session['menu_2'] = menu_2
     request.session['menu_3'] = menu_3
@@ -125,6 +130,7 @@ def mmz_ai(request):
 
 def result(request):
     # 세션에서 각 메뉴 변수 가져오기
+    menu_rec = request.session.get('menu_rec', '메뉴 없음')
     menu_1 = request.session.get('menu_1', '메뉴 없음')
     menu_2 = request.session.get('menu_2', '메뉴 없음')
     menu_3 = request.session.get('menu_3', '메뉴 없음')
@@ -132,6 +138,7 @@ def result(request):
     menu_5 = request.session.get('menu_5', '메뉴 없음')
 
     return render(request, 'mmz_result.html', {
+        'menu_rec':menu_rec,
         'menu_1': menu_1,
         'menu_2': menu_2,
         'menu_3': menu_3,

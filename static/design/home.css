@@ -20,21 +20,12 @@ body {
     src: url('fonts/hak_b.otf') format('truetype');
 }
 
-#logo {
-    margin-left: 30px;
-    color: rgb(20, 20, 20);
-    font-family: 'ddag';
-    text-decoration-line: none;
-    font-size: 0.7cm;
-}
+
 #logo:hover {
     color: rgb(71, 71, 71);
-    font-family: 'ddag';
 }
 
-header hr {
-    width: 180px;
-}
+
 
 .version {
     margin-left: 10px;
